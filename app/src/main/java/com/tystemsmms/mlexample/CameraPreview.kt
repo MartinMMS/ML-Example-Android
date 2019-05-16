@@ -84,6 +84,8 @@ class CameraPreview constructor(val context: Context) {
 
     //transforms the camera preview to fit center crop into the TextureView
     private fun setTransformation() {
+
+        /* TODO: transform camera preview
         if (textureView != null && previewSize != null) {
             val view = textureView!!
             val camera = previewSize!!
@@ -128,6 +130,7 @@ class CameraPreview constructor(val context: Context) {
 
             view.setTransform(matrix) //apply the transformation to the contents of TextureView
         }
+        */
     }
 
     @Throws(SecurityException::class)
@@ -157,7 +160,8 @@ class CameraPreview constructor(val context: Context) {
                         //If the camera outputs its picture rotated then swap imageSizeX<->imageSizeY of the usedPreviewSize accordingly.
                         val sensorOrientation = characteristics.get(CameraCharacteristics.SENSOR_ORIENTATION)
                         val usedPreviewSize = when {
-                            (sensorOrientation == 90 || sensorOrientation == 270) -> Size(largest.height, largest.width)
+                            //TODO: take sensor orientation into account
+                            //(sensorOrientation == 90 || sensorOrientation == 270) -> Size(largest.height, largest.width)
                             else -> largest
                         }
 

@@ -15,9 +15,9 @@ android {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
     }
-    aaptOptions {
-        noCompress "tflite", "lite", "labels"
-    }
+    //aaptOptions {
+    //    noCompress "tflite", "lite", "labels"
+    //}
     buildTypes {
         release {
             minifyEnabled false
